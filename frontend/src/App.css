@@ -1,0 +1,170 @@
+/* client/src/App.css */
+
+:root {
+  --bg-dark: #1e1e1e;
+  --bg-header: #252526;
+  --bg-panel: #1e1e1e;
+  --border-color: #333;
+  --text-primary: #d4d4d4;
+  --text-secondary: #858585;
+  --accent-color: #007acc; /* VS Code Blue */
+  --accent-hover: #0062a3;
+  --success-color: #6a9955;
+  --danger-color: #f14c4c;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  background-color: var(--bg-dark);
+  color: var(--text-primary);
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* --- Layout --- */
+.app-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.editor-container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+}
+
+.panel {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  border-right: 1px solid var(--border-color);
+}
+
+.panel:last-child {
+  border-right: none;
+}
+
+/* --- Header --- */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  background-color: var(--bg-header);
+  border-bottom: 1px solid var(--border-color);
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.logo-icon {
+  font-size: 1.5rem;
+}
+
+.tagline {
+  color: var(--text-secondary);
+  font-size: 0.8rem;
+  margin-left: 8px;
+  padding-left: 8px;
+  border-left: 1px solid #444;
+}
+
+/* --- Buttons --- */
+.actions {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  padding: 8px 16px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background-color: var(--accent-color);
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+}
+
+.btn-primary:disabled {
+  background-color: #444;
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.btn-secondary {
+  background-color: #3c3c3c;
+  color: var(--text-primary);
+  border: 1px solid #444;
+}
+
+.btn-secondary:hover {
+  background-color: #4a4a4a;
+}
+
+/* --- Panel Headers --- */
+.panel-header {
+  padding: 8px 16px;
+  background-color: var(--bg-header);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  justify-content: space-between;
+}
+
+.panel-title {
+  color: var(--text-secondary);
+}
+
+.panel-title.output {
+  color: var(--success-color);
+}
+
+
+
+/* Add to client/src/App.css */
+
+.lang-select {
+  background-color: #3c3c3c;
+  color: #fff;
+  border: 1px solid #555;
+  padding: 8px 12px;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+  cursor: pointer;
+}
+
+.lang-select:hover {
+  background-color: #4a4a4a;
+  border-color: #007acc;
+}
